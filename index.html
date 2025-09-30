@@ -74,9 +74,19 @@
         <section>
             <div id="week4">
                 <h2>Week 4</h2>
-                <p>On this week I had to take time to audit this website in order to understand what I needed to complete for my final draft of my website.
-                    progress is going well for the most part though it is slow due to personal elements in my own life.
+                <p>On this week I had to take time to audit this website in order to understand what I needed to complete for the first draft of my website.
+                    progress is going well for the most part though it is slow due to personal elements in my own life. I also learned about forms and how they are 
+                    used for user inputs like usernames and passwords as well as radio buttons to select options.
                 </p>
+                <p>Do you like the movie Titanic?</p>
+                <form id="movieForm">
+                    <input type="radio" id="answer1" name="fav_movie" value="Yes">
+                    <label for="answer1">Yes</label><br>
+                    <input type="radio" id="answer2" name="fav_movie" value="No">
+                    <label for="answer2">No</label><br><br>
+    
+                    <button type="submit">Submit</button>
+                </form>
             </div>
             <div class="nav-buttons">
                 <button onclick="scrollToSection('Top-page')">Top Page</button>
@@ -107,5 +117,20 @@
                 document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
             }
         </script>
+        <script>
+            document.getElementById('movieForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const formData = new FormData(event.target);
+                const answer = formData.get('fav_movie');
+
+                if (answer) {
+                    alert("Your answer: " + answer);
+
+                } else {
+                    alert("Please select an option before submitting.");
+                    }
+                });
+        </script>
+
     </body>
 </html>

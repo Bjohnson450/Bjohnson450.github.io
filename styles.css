@@ -50,3 +50,14 @@ img{
     color: orange;
     text-decoration: underline orange;
 }
+
+form {
+    margin: 0 auto; /* centers the form horizontally */
+    border-style: ridge;
+    border-radius: 30px;
+    border-width: 20px;
+    background-color: rgba(136, 0, 255, 0.577);
+    width: fit-content;
+    padding: 20px; /* optional, but adds spacing inside the border */
+    text-align: center; /* centers text inside the form */
+}
